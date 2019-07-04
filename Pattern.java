@@ -1,22 +1,30 @@
 import java.io.*;
-import java.util.*;
-public class Pattern
-{
-public static void main(String args[])
-{
-int i,j,count=1,start=0,end=0;
-Scanner in=new Scanner(System.in);
-int rows=in.nextInt();
-for(i=rows;i>=1;--i)
-{
-	end=((i*(i+1))/2);
-	//System.out.println(end);
-	
-for(j=end-(i-1);j<=end;++j)
-{
-System.out.print(j+" ");
+import java.util.Scanner;
+public class Pattern{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int n,num=1;
+		n=in.nextInt();
+		for(int i=0;i<n;i++){
+			for(int j=0;j<=n-i;j++){
+				System.out.print(" ");
+				}
+			for(int k=0;k<=i;k++){
+				System.out.print(" "+num);
+				++num;
+				}
+				System.out.println();
+		}
+		for(int i=n;i>=0;i--){
+			for(int j=0;j<=n-i;j++){
+				System.out.print(" ");
+				}
+			for(int k=0;k<=i;k++){
+				System.out.print(" "+num);
+				++num;
+				}
+				System.out.println();
+		}
+	}
 }
-System.out.println();
-}
-}
-}
+			
